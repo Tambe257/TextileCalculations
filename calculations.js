@@ -1,8 +1,3 @@
-function addTwo(num1, num2){
-	var total = num1 + num2;
-	document.write(total);
-}
-
 function convert(){
 	var x = document.gydToGsm.inches.value;
 	var y = document.gydToGsm.gyd.value;

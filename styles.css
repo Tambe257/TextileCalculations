@@ -1,0 +1,17 @@
+.entry {
+	padding: 5px;
+	width: 200px;
+	height: 300px;
+	background: green;
+	-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #444;
+  text-align: center;
+}
+
+.calc_button {
+	width: 80px;
+	font-weight: bold;
+	text-align: center;
+}

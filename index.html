@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Calculations</title>
+	
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+
+	<script>
+		function convert(){
+			var x = document.gydToGsm.inches.value;
+			var y = document.gydToGsm.gyd.value;
+			var yards = x/36;
+			var calc = ((y/yards)*1.19);
+			document.gydToGsm.result.value = calc;
+		}
+
+	</script>
+</head>
+<body>
+
+	
+<div class="entry">
+	<h2>G/YD to GSM</h2>
+	<form name="gydToGsm">
+		Width: <input type="text" name="inches"> <br/>
+		g/yd: <input type="text" name="gyd"> <br/>
+		<input type="button" value="calc" onClick="convert()" class="calc_button">
+		<br />
+		<input type="text" name="result">
+	</form>
+</div>
+
+	
+</body>
+</html>

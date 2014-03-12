@@ -1,35 +1,68 @@
 <html>
-<head>
-	<title>Calculations</title>
-	
-	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<head>
+		<title>Calculations</title>
+		
+		<link rel="stylesheet" href="styles.css" type="text/css" />
 
-	<script>
-		function convert(){
-			var x = document.gydToGsm.inches.value;
-			var y = document.gydToGsm.gyd.value;
-			var yards = x/36;
-			var calc = ((y/yards)*1.19);
-			document.gydToGsm.result.value = calc;
-		}
+		<script>
+			function convert(){
+				var x = document.gydToGsm.inches.value;
+				var y = document.gydToGsm.gyd.value;
+				var yards = x/36;
+				var calc = ((y/yards)*1.19);
+				document.gydToGsm.result.value = calc;
+			}
 
-	</script>
-</head>
-<body>
-	<nav>
-		<h1>Textile Conversion Calculator</h1>
-	</nav>
-	<div class="container">	
-		<div class="entry">
-			<h2>G/YD to GSM</h2>
-			<hr />
-			<form name="gydToGsm">
-				Width: <input type="text" name="inches"> <br/>
-				G/YD: <input type="text" name="gyd"> <br/>
-				G/M<sup>2</sup>: <input type="text" name="result"><br />
-				<input type="button" value="Calculate" onClick="convert()" class="calc_button">
-			</form>
-		</div>
-	</div><!-- container -->
-</body>
+			function convert2(){
+				var x = document.ozydToYdlb.inches.value;
+				var y = document.ozydToYdlb.ozyd.value;
+				var yards = 36/x;
+				var calc = (16/(y/yards));
+				document.ozydToYdlb.result.value = calc;
+			} 
+
+			function convert3(){
+				
+				document.ozydToGsm.result.value = calc;
+			} 
+		</script>
+	</head>
+	<body>
+		<nav>
+			<h1>Textile Conversion Calculator</h1>
+		</nav>
+		<div class="container">	
+			<div class="entry">
+				<h2>G/YD to G/M<sup>2</sup></h2>
+				<hr />
+				<form name="gydToGsm">
+					Width: <input type="text" name="inches"> <br />
+					G/YD: <input type="text" name="gyd"> <br />
+					G/M<sup>2</sup>: <input type="text" name="result"><br />
+					<input type="button" value="Calculate" onClick="convert()" class="calc_button">
+				</form>
+			</div>
+
+			<div class="entry">
+				<h3>OZ/YD<sup>2</sup> to YD/LB</h3>
+				<hr />
+				<form name="ozydToYdlb">
+					Width: <input type="text" name="inches"> <br />
+					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
+					YD/LB<sup>2</sup>: <input type="text" name="result"><br />
+					<input type="button" value="Calculate" onClick="convert2()" class="calc_button">
+				</form>
+			</div>
+			
+			<div class="entry">
+				<h3>OZ/YD<sup>2</sup> to G/M<sup>2</sup></h3>
+				<hr />
+				<form name="ozydToGsm">
+					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
+					G/M<sup>2</sup>: <input type="text" name="result"><br />
+					<input type="button" value="Calculate" onClick="convert3()" class="calc_button">
+				</form>
+			</div>
+		</div><!-- container -->
+	</body>
 </html>

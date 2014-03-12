@@ -31,6 +31,8 @@ nav {
   border-radius: 5px;
   box-shadow: 1px 1px 10px #444;
   text-align: center;
+  float: left;
+  margin: 5px;
 }
 
 .entry hr {
@@ -50,6 +52,9 @@ input {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	text-align: center;
+	font-size: 17px;
+	padding: 5px;
 }
 
 .calc_button {

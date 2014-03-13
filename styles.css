@@ -16,23 +16,24 @@ nav {
 
 .container {
 	margin: 8px;
+	text-align: center;
 }
 
 .entry {
 	background: -webkit-gradient(linear,left bottom, left top, from(#CCCCCC), to(#EEEEEE));
   background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  display: block;
+  display: inline-block;
   padding: 5px;
 	width: 200px;
-	height: 300px;
+	height: 328px;
 	font-family: Tahoma, Geneva, sans-serif;
 	-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #444;
   text-align: center;
-  float: left;
   margin: 5px;
+  overflow: auto;
 }
 
 .entry hr {
@@ -54,7 +55,6 @@ input {
 	border-radius: 5px;
 	text-align: center;
 	font-size: 17px;
-	padding: 5px;
 }
 
 .calc_button {

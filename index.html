@@ -47,13 +47,23 @@
 				document.gsmToGsyd.result.value = calc;
 			} 
 
+			function convert7(){
+				var x = document.gsyToGyd.gsm.value;
+				var y = document.gsyToGyd.inches.value;
+				var calc = (x/1.1959900463)  
+				var gYd = calc * (y/36)            
+				document.gsyToGyd.result.value = gYd;
+			} 
+
 			function baleTotal(x, y) {
 				x = Number(document.addBale.strt.value);
   			y = Number(document.addBale.baleNum.value);
     		var total = 0;
+    		
     		for (i=0; i<y; i++) {
         	total += (x + i);
     		}
+    		
     		document.addBale.result.value = total;
 			}
 
@@ -82,7 +92,7 @@
 				<form name="ozydToYdlb">
 					Width: <input type="text" name="inches"> <br />
 					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
-					YD/LB<sup>2</sup>: <input type="text" name="result"><br />
+					YD/LB: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="convert2()" class="calc_button">
 				</form>
 			</div>
@@ -124,6 +134,17 @@
 					G/M<sup>2</sup>: <input type="text" name="gsm"> <br />
 					G/YD<sup>2</sup>: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="convert6()" class="calc_button">
+				</form>
+			</div>
+
+			<div class="entry">
+				<h3>G/Y<sup>2</sup> to G/YD</h3>
+				<hr />
+				<form name="gsyToGyd">
+					Width: <input type="text" name="inches"> <br />
+					G/Y<sup>2</sup>: <input type="text" name="gsm"> <br />
+					G/YD: <input type="text" name="result"><br />
+					<input type="button" value="Calculate" onClick="convert7()" class="calc_button">
 				</form>
 			</div>
 

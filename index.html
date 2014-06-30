@@ -55,6 +55,14 @@
 				document.gsyToGyd.result.value = gYd;
 			} 
 
+			function convert8(){
+				var x = document.cubMeter.lngth.value;
+				var y = document.cubMeter.wdth.value;
+				var z = document.cubMeter.hght.value;
+				var calc = (x * 0.0254) * (y * 0.0254) * (z * 0.0254)              
+				document.cubMeter.result.value = calc;
+			}
+
 			function baleTotal(x, y) {
 				x = Number(document.addBale.strt.value);
   			y = Number(document.addBale.baleNum.value);
@@ -79,7 +87,7 @@
 				<h2>G/YD to G/M<sup>2</sup></h2>
 				<hr />
 				<form name="gydToGsm">
-					Width: <input type="text" name="inches"> <br />
+					Width: <input type="text" name="inches" placeholder="inches"> <br />
 					G/YD: <input type="text" name="gyd"> <br />
 					G/M<sup>2</sup>: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="convert()" class="calc_button">
@@ -90,7 +98,7 @@
 				<h3>OZ/YD<sup>2</sup> to YD/LB</h3>
 				<hr />
 				<form name="ozydToYdlb">
-					Width: <input type="text" name="inches"> <br />
+					Width: <input type="text" name="inches" placeholder="inches"> <br />
 					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
 					YD/LB: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="convert2()" class="calc_button">
@@ -141,7 +149,7 @@
 				<h3>G/Y<sup>2</sup> to G/YD</h3>
 				<hr />
 				<form name="gsyToGyd">
-					Width: <input type="text" name="inches"> <br />
+					Width: <input type="text" name="inches" placeholder="inches"> <br />
 					G/Y<sup>2</sup>: <input type="text" name="gsm"> <br />
 					G/YD: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="convert7()" class="calc_button">
@@ -156,6 +164,18 @@
 					# of Bales: <input type="text" name="baleNum"><br />
 					Total: <input type="text" name="result"><br />
 					<input type="button" value="Calculate" onClick="baleTotal()" class="calc_button">
+				</form>
+			</div>
+
+			<div class="entry">
+				<h3>Calc Cubic Meters</h3>
+				<hr />
+				<form name="cubMeter">
+					Length: <input type="text" name="lngth" placeholder="inches"> <br />
+					Width: <input type="text" name="wdth" placeholder="inches"> <br />
+					Height: <input type="text" name="hght" placeholder="inches"> <br />
+					Cubic Meters: <input type="text" name="result"><br />
+					<input type="button" value="Calculate" onClick="convert8()" class="calc_button">
 				</form>
 			</div>
 		</div><!-- container -->

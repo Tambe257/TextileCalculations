@@ -75,6 +75,14 @@
     		document.addBale.result.value = total;
 			}
 
+			function convert9(){
+				var x = document.euroDollar.euro.value;
+				var y = document.euroDollar.rate.value;
+				var z = document.euroDollar.meters.value;
+				var v = document.euroDollar.yards.value;
+				calc = x * y;             
+				document.euroDollar.result.value = calc;
+			}
 
 		</script>
 	</head>
@@ -83,101 +91,127 @@
 			<h1>Textile Conversion Calculator</h1>
 		</div>
 		<div class="container">	
-			<div class="entry">
-				<h2>G/YD to G/M<sup>2</sup></h2>
-				<hr />
-				<form name="gydToGsm">
-					Width: <input type="text" name="inches" placeholder="inches"> <br />
-					G/YD: <input type="text" name="gyd"> <br />
-					G/M<sup>2</sup>: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert()" class="calc_button">
-				</form>
-			</div>
+			<div class="row">
+				<div class="entry">
+					<h2>G/YD to G/M<sup>2</sup></h2>
+					<hr />
+					<form name="gydToGsm">
+						Width: <input type="text" name="inches" placeholder="inches"> <br />
+						G/YD: <input type="text" name="gyd"> <br />
+						G/M<sup>2</sup>: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>OZ/YD<sup>2</sup> to YD/LB</h3>
-				<hr />
-				<form name="ozydToYdlb">
-					Width: <input type="text" name="inches" placeholder="inches"> <br />
-					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
-					YD/LB: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert2()" class="calc_button">
-				</form>
-			</div>
-			
-			<div class="entry">
-				<h3>OZ/YD<sup>2</sup> to G/M<sup>2</sup></h3>
-				<hr />
-				<form name="ozydToGsm">
-					OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
-					G/M<sup>2</sup>: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert3()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>OZ/YD<sup>2</sup> to YD/LB</h3>
+					<hr />
+					<form name="ozydToYdlb">
+						Width: <input type="text" name="inches" placeholder="inches"> <br />
+						OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
+						YD/LB: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert2()" class="calc_button">
+					</form>
+				</div>
+				
+				<div class="entry">
+					<h3>OZ/YD<sup>2</sup> to G/M<sup>2</sup></h3>
+					<hr />
+					<form name="ozydToGsm">
+						OZ/YD<sup>2</sup>: <input type="text" name="ozyd"> <br />
+						G/M<sup>2</sup>: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert3()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>G/M<sup>2</sup> to OZ/YD<sup>2</sup></h3>
-				<hr />
-				<form name="gsmToOzyd">
-					G/M<sup>2</sup>: <input type="text" name="gsm"> <br />
-					OZ/YD<sup>2</sup>: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert4()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>G/M<sup>2</sup> to OZ/YD<sup>2</sup></h3>
+					<hr />
+					<form name="gsmToOzyd">
+						G/M<sup>2</sup>: <input type="text" name="gsm"> <br />
+						OZ/YD<sup>2</sup>: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert4()" class="calc_button">
+					</form>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="entry">
+					<h3>G/YD<sup>2</sup> to G/M<sup>2</sup></h3>
+					<hr />
+					<form name="gsydToGsm">
+						G/YD<sup>2</sup>: <input type="text" name="gsyd"> <br />
+						G/M<sup>2</sup>: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert5()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>G/YD<sup>2</sup> to G/M<sup>2</sup></h3>
-				<hr />
-				<form name="gsydToGsm">
-					G/YD<sup>2</sup>: <input type="text" name="gsyd"> <br />
-					G/M<sup>2</sup>: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert5()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>G/M<sup>2</sup> to G/YD<sup>2</sup></h3>
+					<hr />
+					<form name="gsmToGsyd">
+						G/M<sup>2</sup>: <input type="text" name="gsm"> <br />
+						G/YD<sup>2</sup>: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert6()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>G/M<sup>2</sup> to G/YD<sup>2</sup></h3>
-				<hr />
-				<form name="gsmToGsyd">
-					G/M<sup>2</sup>: <input type="text" name="gsm"> <br />
-					G/YD<sup>2</sup>: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert6()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>G/Y<sup>2</sup> to G/YD</h3>
+					<hr />
+					<form name="gsyToGyd">
+						Width: <input type="text" name="inches" placeholder="inches"> <br />
+						G/Y<sup>2</sup>: <input type="text" name="gsm"> <br />
+						G/YD: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert7()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>G/Y<sup>2</sup> to G/YD</h3>
-				<hr />
-				<form name="gsyToGyd">
-					Width: <input type="text" name="inches" placeholder="inches"> <br />
-					G/Y<sup>2</sup>: <input type="text" name="gsm"> <br />
-					G/YD: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert7()" class="calc_button">
-				</form>
+				<div class="entry">
+					<h3>Bale Totals</h3>
+					<hr />
+					<form name="addBale">
+						First Bale#: <input type="text" name="strt"> <br />
+						# of Bales: <input type="text" name="baleNum"><br />
+						Total: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="baleTotal()" class="calc_button">
+					</form>
+				</div>
 			</div>
+			<div class="row">
+				<div class="entry">
+					<h3>Calc Cubic Meters</h3>
+					<hr />
+					<form name="cubMeter">
+						Length: <input type="text" name="lngth" placeholder="inches"> <br />
+						Width: <input type="text" name="wdth" placeholder="inches"> <br />
+						Height: <input type="text" name="hght" placeholder="inches"> <br />
+						Cubic Meters: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert8()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>Bale Totals</h3>
-				<hr />
-				<form name="addBale">
-					First Bale#: <input type="text" name="strt"> <br />
-					# of Bales: <input type="text" name="baleNum"><br />
-					Total: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="baleTotal()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>Euros To $</h3>
+					<hr />
+					<form name="euroDollar">
+						Euro: <input type="text" name="euro" placeholder="Euros"> <br />
+						Exchange Rate: <input type="text" name="rate" placeholder="Exchange Rate"> <br />
+						Dollars: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert9()" class="calc_button">
+					</form>
+				</div>
 
-			<div class="entry">
-				<h3>Calc Cubic Meters</h3>
-				<hr />
-				<form name="cubMeter">
-					Length: <input type="text" name="lngth" placeholder="inches"> <br />
-					Width: <input type="text" name="wdth" placeholder="inches"> <br />
-					Height: <input type="text" name="hght" placeholder="inches"> <br />
-					Cubic Meters: <input type="text" name="result"><br />
-					<input type="button" value="Calculate" onClick="convert8()" class="calc_button">
-				</form>
-			</div>
+				<div class="entry">
+					<h3>Meters To Yards</h3>
+					<hr />
+					<form name="euroDollar">
+						Meters: <input type="text" name="meters" placeholder="Meters"> <br />
+						Yards: <input type="text" name="yards" placeholder="Yards"> <br />
+						Dollars: <input type="text" name="result"><br />
+						<input type="button" value="Calculate" onClick="convert10()" class="calc_button">
+					</form>
+				</div>
+			</div>	
 		</div><!-- container -->
 	</body>
 </html>
